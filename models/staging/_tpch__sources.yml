@@ -4,6 +4,10 @@ sources:
   - name: tpch
     database: DEV_BRONZE_DB
     schema: TPCH
+    freshness:
+      warn_after: {count: 12, period: hour}  # Warning si los datos tienen más de 12 horas
+    loaded_at_field: ingest_timestamp # Campo usado para medir la frescura de los datos
+
     tables:
       - name: customer
         columns:
