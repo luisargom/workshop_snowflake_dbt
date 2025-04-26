@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: tpch
-    databse: DEV_BRONZE_DB
+    database: DEV_BRONZE_DB
     schema: TPCH
     tables:
       - name: customer
